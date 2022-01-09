@@ -8,7 +8,6 @@ LunchCheckController.$inject = ['$scope'];
 function LunchCheckController($scope) {
   $scope.name = "";
   $scope.status = "";
-
   $scope.state = function () {
     var num = $scope.name;
     var countPoints = num.split(',').length;
