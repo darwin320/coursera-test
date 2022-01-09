@@ -11,12 +11,13 @@ function LunchCheckController($scope) {
 
   $scope.state = function () {
     var num = $scope.name;
-    var countPoints = num.split(',').length-1;
-    if (countPoints>=1 && countPoints<=3) {
+    var countPoints = num.split(',').length;
+    console.log(countPoints);
+    if (countPoints>=1 && countPoints<=3 && num!="") {
       num = "Enjoy!";
     }else if (countPoints>3) {
       num = "Too much!";
-    }else if(num.length==0){
+    }else if(countPoints==1){
       num = "Please enter data first";
     }else{
       num = "";
